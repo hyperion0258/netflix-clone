@@ -54,6 +54,13 @@ header {
   font-size: 18px
 }
 
+/* Common CSS */
+
+section {
+  border-bottom: 10px solid #333;
+  position: relative;
+}
+
 /* Section : Welcome */
 .welcome {
   height: 80vh;
@@ -138,4 +145,110 @@ header {
   color: #fff;
   font-size: 26px;
   cursor: pointer;
+}
+
+/* section : Enjoy, Download, Watch, Create */
+
+.enjoy, .download, .watch, .create {
+  height: 500px;
+}
+
+.inner {
+  width: 1150px;
+  margin: auto;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.desc,
+.preview {
+  float: left;
+  width: 50%;
+}
+
+.desc {
+  padding-top: 40px;
+}
+
+.desc h2 {
+  font-size: 50px;
+  line-height: 1.2em;
+}
+
+.preview {
+  text-align: center;
+}
+
+.preview img {
+  height: 350px;
+}
+
+label {
+  list-style: none;
+}
+
+/* Section : FAQ */
+
+.faq {
+  padding: 80px 0;
+}
+
+.faq-inner {
+  width: 850px;
+  margin: auto;
+}
+
+.faq-inner h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+input[name=faq-item] {
+  display: none;
+}
+
+input[name=faq-item] + label {
+  display: block;
+  background-color: #303030;
+  padding: 15px;
+  cursor: pointer;
+  margin-bottom: 3px;
+}
+
+.faq-content {
+  background-color: #303030;
+  padding: 15px;
+  margin-bottom: 10px;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  transition: max-height 0.5s;
+}
+
+input[name=faq-item] + label span {
+  float: right;
+  font-size: 36 px;
+  transition: 0.35s;
+}
+
+aside {
+  text-align: center;
+}
+
+aside p {
+  font-size: 24px;
+}
+
+/* Checked function */
+input[name=faq-item]:checked + label + .faq-content {
+  max-height: 500px;
+  padding: 15px;
+}
+
+input[name=faq-item]:checked + label span {
+  transform: rotate(45deg);
 }
